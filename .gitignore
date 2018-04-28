@@ -18,5 +18,55 @@
 *.tar.gz
 *.rar
 
+# maven file
+dependency-reduced-pom.xml
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+######################
+# Eclipse
+######################
+
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# Directories #
+/build/
+/bin/
+target/
+
+######################
+# Windows
+######################
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+
+######################
+# IntelliJ
+######################
+
+*.iml
+
+######################
+# VS Code
+######################
+
+.vscode
