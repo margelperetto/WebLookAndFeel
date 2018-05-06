@@ -103,11 +103,16 @@ public class UIWebButton extends MetalButtonUI{
 	private class MouseEnteredListener extends MouseAdapter{
 		@Override
 		public void mouseEntered(MouseEvent e) {
-			alpha = 0.8f;
+			alpha = 0.85f;
 			e.getComponent().repaint();
 		}
 		@Override
 		public void mouseExited(MouseEvent e) {
+			alpha = 1f;
+			e.getComponent().repaint();
+		}
+		@Override
+		public void mousePressed(MouseEvent e) {
 			alpha = 1f;
 			e.getComponent().repaint();
 		}
