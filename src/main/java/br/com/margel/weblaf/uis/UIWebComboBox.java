@@ -73,7 +73,7 @@ public class UIWebComboBox extends MetalComboBoxUI{
 		c.addFocusListener(new BorderPaintFocusAdapter());
 		if(c instanceof JComponent){
 			JComponent jc = (JComponent)c;
-			jc.setBorder(new EmptyBorder(6, 3, 6, 1));
+			jc.setBorder(new EmptyBorder(6, leftBorder(), 6, 1));
 			jc.setOpaque(false);
 		}
 		return editor;
@@ -93,9 +93,13 @@ public class UIWebComboBox extends MetalComboBoxUI{
 				t.setForeground(isSelected?selForeground:comboBox.getForeground());
 			}
 			int spc = index>=0?6:0;
-			t.setBorder(new EmptyBorder(spc, 3, spc, 3));
+			t.setBorder(new EmptyBorder(spc, leftBorder(), spc, 3));
 			return t;
 		};
+	}
+	
+	private int leftBorder() {
+		return WebTheme.TEXT_FIELD_BORDER_INSETS.left;
 	}
 
 	@Override

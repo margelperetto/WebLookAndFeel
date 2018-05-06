@@ -11,143 +11,145 @@ import javax.swing.border.EmptyBorder;
 import br.com.margel.weblaf.borders.WebBorder;
 import br.com.margel.weblaf.utils.IconUtils;
 
-public interface WebTheme {
+public final class WebTheme {
+	
+	private WebTheme() {}
 
-	Font TEXT_FIELD_FONT = new Font("Arial", Font.PLAIN, 12);
-	Color TEXT_FIELD_BG = Color.WHITE;
-	Color TEXT_FIELD_FG = Color.DARK_GRAY;
-	Color TEXT_FIELD_FOCUS_COLOR = Color.decode("#80bdff");
-	Color TEXT_FIELD_BORDER_COLOR = Color.decode("#ced4da");
-	Color TEXT_FIELD_SELECTION_BG = Color.decode("#ced4da");
-	Color TEXT_FIELD_SELECTION_FG = Color.BLACK;
-	int TEXT_FIELD_BORDER_ROUND = 5;
-	Insets TEXT_FIELD_BORDER_INSETS = new Insets(10, 12, 10, 12);
+	public static Font TEXT_FIELD_FONT = new Font("Arial", Font.PLAIN, 12);
+	public static Color TEXT_FIELD_BG = Color.WHITE;
+	public static Color TEXT_FIELD_FG = Color.DARK_GRAY;
+	public static Color TEXT_FIELD_FOCUS_COLOR = Color.decode("#80bdff");
+	public static Color TEXT_FIELD_BORDER_COLOR = Color.decode("#ced4da");
+	public static Color TEXT_FIELD_SELECTION_BG = Color.decode("#ced4da");
+	public static Color TEXT_FIELD_SELECTION_FG = Color.BLACK;
+	public static int TEXT_FIELD_BORDER_ROUND = 5;
+	public static Insets TEXT_FIELD_BORDER_INSETS = new Insets(10, 12, 10, 12);
 	
-	Color LIST_BG = Color.WHITE;
-	Color LIST_FG = Color.DARK_GRAY;
-	Color LIST_SELECTION_BG = new Color(230, 240, 240);
-	Color LIST_SELECTION_FG = Color.BLACK;
-	Font LIST_FONT = new Font("Arial", Font.PLAIN, 12);
+	public static Color LIST_BG = Color.WHITE;
+	public static Color LIST_FG = Color.DARK_GRAY;
+	public static Color LIST_SELECTION_BG = new Color(230, 240, 240);
+	public static Color LIST_SELECTION_FG = Color.BLACK;
+	public static Font LIST_FONT = new Font("Arial", Font.PLAIN, 12);
 	
-	Color TEXTAREA_FG = Color.DARK_GRAY;
-	Color TEXTAREA_BG = Color.WHITE;
-	Font TEXTAREA_FONT = new Font("Arial", Font.PLAIN, 12);
-	Insets TEXTAREA_MARGIN = new Insets(10, 10, 10, 10);
+	public static Color TEXTAREA_FG = Color.DARK_GRAY;
+	public static Color TEXTAREA_BG = Color.WHITE;
+	public static Font TEXTAREA_FONT = new Font("Arial", Font.PLAIN, 12);
+	public static Insets TEXTAREA_MARGIN = new Insets(10, 10, 10, 10);
 	
-	Font TEXTPANE_FONT = new Font("Arial", Font.PLAIN, 12);
+	public static Font TEXTPANE_FONT = new Font("Arial", Font.PLAIN, 12);
 	
-	Font EDITORPANE_FONT = new Font("Arial", Font.PLAIN, 12);
+	public static Font EDITORPANE_FONT = new Font("Arial", Font.PLAIN, 12);
 	
-	Color POPUPMENU_BG = Color.CYAN.darker();
-	Color POPUPMENU_BORDER = Color.CYAN.darker();
+	public static Color POPUPMENU_BG = Color.CYAN.darker();
+	public static Color POPUPMENU_BORDER = Color.CYAN.darker();
 	
-	Color BUTTON_BG = Color.decode("#007bff");
-	Color BUTTON_FG = new Color(245, 245, 245);
-	Font BUTTON_FONT = new Font("Arial", Font.BOLD, 12);
+	public static Color BUTTON_BG = Color.decode("#007bff");
+	public static Color BUTTON_FG = new Color(245, 245, 245);
+	public static Font BUTTON_FONT = new Font("Arial", Font.BOLD, 12);
 	
-	Font LABEL_FONT = new Font("Arial", Font.PLAIN, 12);
-	Color LABEL_FG = Color.DARK_GRAY;
+	public static Font LABEL_FONT = new Font("Arial", Font.PLAIN, 12);
+	public static Color LABEL_FG = Color.DARK_GRAY;
 	
-	Color PANEL_BG = Color.WHITE;
+	public static Color PANEL_BG = Color.WHITE;
 
-	Color OPTIONPANE_BG = Color.WHITE;
+	public static Color OPTIONPANE_BG = Color.WHITE;
 	
-	Color CHECK_BG = Color.WHITE;
-	Color CHECK_FG = Color.DARK_GRAY;
-	Font CHECK_FONT = new Font("Arial", Font.PLAIN, 12);
+	public static Color CHECK_BG = Color.WHITE;
+	public static Color CHECK_FG = Color.DARK_GRAY;
+	public static Font CHECK_FONT = new Font("Arial", Font.PLAIN, 12);
 
-	Color RADIO_BG = Color.WHITE;
-	Color RADIO_FG = Color.DARK_GRAY;
-	Font RADIO_FONT = new Font("Arial", Font.PLAIN, 12);
+	public static Color RADIO_BG = Color.WHITE;
+	public static Color RADIO_FG = Color.DARK_GRAY;
+	public static Font RADIO_FONT = new Font("Arial", Font.PLAIN, 12);
 	
-	Font COMBO_FONT = new Font("Arial", Font.PLAIN, 12);
-	Color COMBO_FG = Color.DARK_GRAY;
-	Color COMBO_BORDER = Color.decode("#ced4da");
-	Color COMBO_BUTTON_BG = Color.DARK_GRAY;
-	Color COMBO_SELECT_FG = Color.CYAN.darker();
-	Color COMBO_SELECT_BG = new Color(240, 240, 240);
-	Color COMBO_FOCO = Color.decode("#80bdff");
-	Color COMBO_BG = Color.WHITE;
-	Color COMBO_ARROW = Color.GRAY;
-	int COMBO_BORDER_ROUND = 5;
+	public static Font COMBO_FONT = new Font("Arial", Font.PLAIN, 12);
+	public static Color COMBO_FG = Color.DARK_GRAY;
+	public static Color COMBO_BORDER = Color.decode("#ced4da");
+	public static Color COMBO_BUTTON_BG = Color.DARK_GRAY;
+	public static Color COMBO_SELECT_FG = Color.CYAN.darker();
+	public static Color COMBO_SELECT_BG = new Color(240, 240, 240);
+	public static Color COMBO_FOCO = Color.decode("#80bdff");
+	public static Color COMBO_BG = Color.WHITE;
+	public static Color COMBO_ARROW = Color.GRAY;
+	public static int COMBO_BORDER_ROUND = 5;
 	
-	Color SCROLLBAR_THUMB = Color.decode("#cdcdcd");
-	Color SCROLLBAR_TRACK = Color.decode("#f0f0f0");
-	Color SCROLLBAR_ARROW = Color.GRAY;
+	public static Color SCROLLBAR_THUMB = Color.decode("#cdcdcd");
+	public static Color SCROLLBAR_TRACK = Color.decode("#f0f0f0");
+	public static Color SCROLLBAR_ARROW = Color.GRAY;
 	
-	Color SCROLL_BORDER = Color.decode("#ced4da");
+	public static Color SCROLL_BORDER = Color.decode("#ced4da");
 	
-	Color SEPARATOR_FOREGROUND = Color.decode("#ced4da");
+	public static Color SEPARATOR_FOREGROUND = Color.decode("#ced4da");
 	
-	Color SPINNER_ARROW = Color.GRAY;
+	public static Color SPINNER_ARROW = Color.GRAY;
 	
-	Color SLIDER_BUTTON_BG = Color.DARK_GRAY;
-	Color SLIDER_BUTTON_FG = Color.DARK_GRAY;
-	Color SLIDER_FOCO = Color.decode("#80bdff");
+	public static Color SLIDER_BUTTON_BG = Color.DARK_GRAY;
+	public static Color SLIDER_BUTTON_FG = Color.DARK_GRAY;
+	public static Color SLIDER_FOCO = Color.decode("#80bdff");
 	
-	Color PROGRESS_BG = Color.WHITE;
-	Color PROGRESS_FG = Color.DARK_GRAY;
+	public static Color PROGRESS_BG = Color.WHITE;
+	public static Color PROGRESS_FG = Color.DARK_GRAY;
 	
-	Color TABBED_UNSELECT = Color.WHITE;
-	Color TABBED_SELECT = Color.WHITE;
-	Color TABBED_SELECT_BORDER = Color.GRAY;
-	Color TABBED_UNSELECT_BORDER = Color.WHITE;
-	Color TABBED_FOCUS = Color.decode("#80bdff");
-	Color TABBED_FG = Color.DARK_GRAY;
-	Color TABBED_CONTENT_BORDER = Color.LIGHT_GRAY;
-	Color TABBED_SEL_BORDER_UNDERLINE = Color.CYAN.darker();;
-	Font TABBED_FONT = new Font("Arial", Font.PLAIN, 12);
+	public static Color TABBED_UNSELECT = Color.WHITE;
+	public static Color TABBED_SELECT = Color.WHITE;
+	public static Color TABBED_SELECT_BORDER = Color.GRAY;
+	public static Color TABBED_UNSELECT_BORDER = Color.WHITE;
+	public static Color TABBED_FOCUS = Color.decode("#80bdff");
+	public static Color TABBED_FG = Color.DARK_GRAY;
+	public static Color TABBED_CONTENT_BORDER = Color.LIGHT_GRAY;
+	public static Color TABBED_SEL_BORDER_UNDERLINE = Color.CYAN.darker();;
+	public static Font TABBED_FONT = new Font("Arial", Font.PLAIN, 12);
 	
-	Color SEPARATOR_COLOR = Color.LIGHT_GRAY;
+	public static Color SEPARATOR_COLOR = Color.LIGHT_GRAY;
 	
-	Border TITLEDBORDER_BORDER = new WebBorder(new Insets(2, 10, 2, 10));
-	Font TITLEDBORDER_FONT = new Font("Arial", Font.PLAIN, 12);
-	Color TITLEDBORDER_FG = Color.DARK_GRAY;
+	public static Border TITLEDBORDER_BORDER = new WebBorder(new Insets(2, 10, 2, 10));
+	public static Font TITLEDBORDER_FONT = new Font("Arial", Font.PLAIN, 12);
+	public static Color TITLEDBORDER_FG = Color.DARK_GRAY;
 	
-	Color TREE_HASH = new Color(215, 225, 245);
-	Color TREE_LINE = Color.LIGHT_GRAY;
-	Color TREE_SELECTION_BG =  Color.CYAN.darker();
-	Color TREE_SELECTION_FG = Color.WHITE;
-	Color TREE_SELECTION_BORDER_COLOR = Color.LIGHT_GRAY;
-	Color TREE_BG = Color.WHITE;
-	Color TREE_FG = Color.BLACK;
-	Color TREE_TEXT_BG = Color.WHITE;
-	Color TREE_TEXT_FG = Color.BLACK;
-	ImageIcon TREE_OPEN_ICON = IconUtils.getImageIcon("open_folder_yellow20x20.png");
-	ImageIcon TREE_CLOSE_ICON = IconUtils.getImageIcon("close_folder_yellow20x20.png");
-	ImageIcon TREE_LEAF_ICON = IconUtils.getImageIcon("leaf.png");
-	ImageIcon TREE_EXPANDED_ICON = IconUtils.getImageIcon("minus10x10.png");
-	ImageIcon TREE_COLLAPSED_ICON = IconUtils.getImageIcon("plus10x10.png");
+	public static Color TREE_HASH = new Color(215, 225, 245);
+	public static Color TREE_LINE = Color.LIGHT_GRAY;
+	public static Color TREE_SELECTION_BG =  Color.CYAN.darker();
+	public static Color TREE_SELECTION_FG = Color.WHITE;
+	public static Color TREE_SELECTION_BORDER_COLOR = Color.LIGHT_GRAY;
+	public static Color TREE_BG = Color.WHITE;
+	public static Color TREE_FG = Color.BLACK;
+	public static Color TREE_TEXT_BG = Color.WHITE;
+	public static Color TREE_TEXT_FG = Color.BLACK;
+	public static ImageIcon TREE_OPEN_ICON = IconUtils.getImageIcon("open_folder_yellow20x20.png");
+	public static ImageIcon TREE_CLOSE_ICON = IconUtils.getImageIcon("close_folder_yellow20x20.png");
+	public static ImageIcon TREE_LEAF_ICON = IconUtils.getImageIcon("leaf.png");
+	public static ImageIcon TREE_EXPANDED_ICON = IconUtils.getImageIcon("minus10x10.png");
+	public static ImageIcon TREE_COLLAPSED_ICON = IconUtils.getImageIcon("plus10x10.png");
 	
-	Font TABLE_FONT = new Font("Arial", Font.PLAIN, 12);
-	Color TABLE_GRIDCOLOR = Color.LIGHT_GRAY;
-	Color TABLE_CEL_FOCUS = Color.BLACK;
-	Color TABLE_SELECTION_FG = Color.BLACK;
-	Color TABLE_SELECTION_BG = Color.LIGHT_GRAY;
-	Color TABLE_ALTERNATE_ROW_COLOR = new Color(245, 245, 245);
+	public static Font TABLE_FONT = new Font("Arial", Font.PLAIN, 12);
+	public static Color TABLE_GRIDCOLOR = Color.LIGHT_GRAY;
+	public static Color TABLE_CEL_FOCUS = Color.BLACK;
+	public static Color TABLE_SELECTION_FG = Color.BLACK;
+	public static Color TABLE_SELECTION_BG = Color.LIGHT_GRAY;
+	public static Color TABLE_ALTERNATE_ROW_COLOR = new Color(245, 245, 245);
 	
-	Font TABLE_HEADER_FONT = new Font("Arial", Font.BOLD, 12);
-	Color TABLE_HEADER_BG = Color.WHITE;
-	Color TABLE_HEADER_FG = Color.BLACK;
+	public static Font TABLE_HEADER_FONT = new Font("Arial", Font.BOLD, 12);
+	public static Color TABLE_HEADER_BG = Color.WHITE;
+	public static Color TABLE_HEADER_FG = Color.BLACK;
 	
-	ImageIcon FILECHOOSER_DIR_ICON = IconUtils.getImageIcon("close_folder_yellow20x20.png");
-	ImageIcon FILECHOOSER_FILE_ICON = IconUtils.getImageIcon("file20x20.png");
-	ImageIcon FILECHOOSER_COMPUTER_ICON = IconUtils.getImageIcon("computer20x20.png");
-	ImageIcon FILECHOOSER_HARD_DRIVE_ICON = IconUtils.getImageIcon("storage20x20.png");
-	ImageIcon FILECHOOSER_FLOPPY_ICON = IconUtils.getImageIcon("floppy20x20.png");
-	ImageIcon FILECHOOSER_UP_ICON = IconUtils.getImageIcon("folder_up25x25.png");
-	ImageIcon FILECHOOSER_NEWFOLDER_ICON = IconUtils.getImageIcon("new_folder25x25.png");
-	ImageIcon FILECHOOSER_HOME_ICON = IconUtils.getImageIcon("desktop25x25.png");
-	ImageIcon FILECHOOSER_LIST_VIEW_ICON = IconUtils.getImageIcon("list_view25x25.png");
-	ImageIcon FILECHOOSER_DETAIL_VIEW_ICON = IconUtils.getImageIcon("detail_view25x25.png");
-	ImageIcon FILECHOOSER_VIEW_MENU_ICON = IconUtils.getImageIcon("detail_view25x25.png");
+	public static ImageIcon FILECHOOSER_DIR_ICON = IconUtils.getImageIcon("close_folder_yellow20x20.png");
+	public static ImageIcon FILECHOOSER_FILE_ICON = IconUtils.getImageIcon("file20x20.png");
+	public static ImageIcon FILECHOOSER_COMPUTER_ICON = IconUtils.getImageIcon("computer20x20.png");
+	public static ImageIcon FILECHOOSER_HARD_DRIVE_ICON = IconUtils.getImageIcon("storage20x20.png");
+	public static ImageIcon FILECHOOSER_FLOPPY_ICON = IconUtils.getImageIcon("floppy20x20.png");
+	public static ImageIcon FILECHOOSER_UP_ICON = IconUtils.getImageIcon("folder_up25x25.png");
+	public static ImageIcon FILECHOOSER_NEWFOLDER_ICON = IconUtils.getImageIcon("new_folder25x25.png");
+	public static ImageIcon FILECHOOSER_HOME_ICON = IconUtils.getImageIcon("desktop25x25.png");
+	public static ImageIcon FILECHOOSER_LIST_VIEW_ICON = IconUtils.getImageIcon("list_view25x25.png");
+	public static ImageIcon FILECHOOSER_DETAIL_VIEW_ICON = IconUtils.getImageIcon("detail_view25x25.png");
+	public static ImageIcon FILECHOOSER_VIEW_MENU_ICON = IconUtils.getImageIcon("detail_view25x25.png");
 	
-	Color TOOLTIP_BG = Color.WHITE;
-	Color TOOLTIP_FG = Color.BLACK;
-	Font TOOLTIP_FONT = new Font("Arial", Font.PLAIN, 12);
-	Border TOOLTIP_BORDER = new WebBorder().arcSize(2);
+	public static Color TOOLTIP_BG = Color.WHITE;
+	public static Color TOOLTIP_FG = Color.BLACK;
+	public static Font TOOLTIP_FONT = new Font("Arial", Font.PLAIN, 12);
+	public static Border TOOLTIP_BORDER = new WebBorder().arcSize(2);
 	
-// REFACTOR
+// XXX REFACTORY
 //------------------------------------------------------------------------------------------------	
 	
 	/*PADRÕES GLOBAIS - APENAS AJUDAM A PADRONIZAR, MAS NÃO SÃO USADOS NOS COMPONENTES*/
@@ -161,7 +163,6 @@ public interface WebTheme {
 	public static Color SELECTED = Color.GREEN.darker();
 	public static Font FONT_GLOBAL = new Font("Arial", Font.PLAIN, 12);
     //----------------------------------------------------------------------------------------------
-	
 	
 	public static Border MENUS_BORDER = new EmptyBorder(6, 5, 5, 5);
 	public static Color MENUITENS_BG = FG2;

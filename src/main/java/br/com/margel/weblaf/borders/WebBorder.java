@@ -1,6 +1,5 @@
 package br.com.margel.weblaf.borders;
 
-import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Graphics;
@@ -41,7 +40,6 @@ public class WebBorder extends EmptyBorder{
 		Graphics2D g2d = (Graphics2D) g.create();
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		if(paintFocus && c.isFocusOwner()){
-			g2d.setStroke(new BasicStroke(2, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
 			g2d.setColor(focusColor);
 		} else {
 			g2d.setColor(color);

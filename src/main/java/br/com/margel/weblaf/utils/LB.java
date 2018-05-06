@@ -3,6 +3,7 @@ package br.com.margel.weblaf.utils;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.event.MouseListener;
 
 import javax.swing.Icon;
 import javax.swing.JLabel;
@@ -103,6 +104,16 @@ public class LB extends JLabel{
 	
 	public LB cursor(int type) {
 		this.setCursor(new Cursor(type));
+		return this;
+	}
+	
+	public LB toolTip(String text) {
+		this.setToolTipText(text);
+		return this;
+	}
+	
+	public LB mouseListener(MouseListener listener) {
+		this.addMouseListener(listener);
 		return this;
 	}
 	

@@ -1,5 +1,6 @@
 package br.com.margel.weblaf.utils;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Container;
 import java.util.ArrayList;
@@ -21,4 +22,19 @@ public class ComponentUtils {
 		}
 		return tList;
 	}
+
+	public static Color getParentBg(JComponent c) {
+		if(c.getParent() == null) {
+			return null;
+		}
+		return findBackgroundColor(c.getParent());
+	}
+	
+	private static Color findBackgroundColor(Container parent) {
+		if(parent.isOpaque()) {
+			return parent.getBackground();
+		}
+		return parent.getParent()==null?null:findBackgroundColor(parent.getParent());
+	}
+	
 }
