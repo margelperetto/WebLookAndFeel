@@ -72,6 +72,9 @@ public class UIWebButton extends MetalButtonUI{
 	}
 	
 	protected void paintCustomBackgroud(Graphics g, JComponent c, WebBorder b, float alpha) {
+		if(!c.isEnabled()) {
+			alpha = 0.5f;
+		}
 		Graphics2D g2d = (Graphics2D) g.create();
 		g2d.setColor(ComponentUtils.getParentBg(c));
 		g2d.fillRect(0, 0, c.getWidth(), c.getHeight());
