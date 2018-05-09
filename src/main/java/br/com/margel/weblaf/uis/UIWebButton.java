@@ -35,13 +35,12 @@ public class UIWebButton extends MetalButtonUI{
 		b.setBackground(WebTheme.BUTTON_BG);
 		b.setForeground(WebTheme.BUTTON_FG);
 		b.setFont(WebTheme.BUTTON_FONT);
+		b.setOpaque(WebTheme.BUTTON_OPAQUE);
+		b.setBorderPainted(WebTheme.BUTTON_BORDER_PAINTED);
 		b.addMouseListener(new MouseEnteredListener());
 		RepaintUtils.installListeners(c);
 		
-		WebBorder webBorder = new WebBorder();
-		webBorder.setArcHeight(6);
-		webBorder.setArcWidth(6);
-		b.setBorder(webBorder);
+		b.setBorder(new WebBorder().arcSize(WebTheme.BUTTON_BORDER_ROUND));
 	}
 	
 	@Override

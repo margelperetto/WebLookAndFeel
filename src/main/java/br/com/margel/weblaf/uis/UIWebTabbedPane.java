@@ -47,6 +47,8 @@ public class UIWebTabbedPane extends MetalTabbedPaneUI{
 	
 	@Override
 	protected void paintContentBorder(Graphics g, int tabPlacement,int selectedIndex) {
+		if(selectedIndex<0) return;
+		
 		Rectangle r = getContentRectangle(tabPlacement);
 		Graphics2D g2d = (Graphics2D)g.create();
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);

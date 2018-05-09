@@ -46,6 +46,9 @@ public final class WebTheme {
 	public static Color BUTTON_BG = Color.decode("#007bff");
 	public static Color BUTTON_FG = new Color(245, 245, 245);
 	public static Font BUTTON_FONT = new Font("Arial", Font.BOLD, 12);
+	public static boolean BUTTON_OPAQUE = true;
+	public static boolean BUTTON_BORDER_PAINTED = true;
+	public static int BUTTON_BORDER_ROUND = 5;
 	
 	public static Font LABEL_FONT = new Font("Arial", Font.PLAIN, 12);
 	public static Color LABEL_FG = Color.DARK_GRAY;

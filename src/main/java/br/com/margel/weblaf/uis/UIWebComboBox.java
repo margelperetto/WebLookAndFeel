@@ -130,6 +130,7 @@ public class UIWebComboBox extends MetalComboBoxUI{
 	private class ComboPopup extends BasicComboPopup{
 		public ComboPopup(JComboBox combo) {
 			super(combo);
+			setBorder(new WebBorder(1).arcSize(1).color(WebTheme.COMBO_BORDER));
 		}
 		@Override
 		protected JScrollPane createScroller() {
