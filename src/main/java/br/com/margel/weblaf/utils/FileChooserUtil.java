@@ -79,12 +79,16 @@ public class FileChooserUtil {
 		return file;
 	}
 
-	public static String openDirectoryDialog(Window owner){
-		JFileChooser chooser = new JFileChooser();
+	public static File openDirectoryDialog(Window owner){
+		return openDirectoryDialog(owner, null);
+	}
+	
+	public static File openDirectoryDialog(Window owner, File current){
+		JFileChooser chooser = new JFileChooser(current);
 		chooser.setDialogTitle("Selecione uma pasta");
 		chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY); 
 		if(chooser.showOpenDialog(owner) == JFileChooser.APPROVE_OPTION){
-			return chooser.getSelectedFile().getPath();
+			return chooser.getSelectedFile();
 		}
 		return null;
 	}
